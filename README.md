@@ -1,109 +1,187 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le bien-être au quotidien - Programme WHAOU</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f7fa;
-            margin: 0;
-            padding: 0;
-        }
+<title>Enquête habitat et bien-être</title>
 
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-        }
+<style>
 
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 30px;
-        }
+body{
+    margin:0;
+    padding:0;
+    background:#f1f1ef;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#0047B3;
+}
 
-        p {
-            font-size: 1.1em;
-            line-height: 1.7;
-            color: #444;
-            text-align: justify;
-        }
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 25px 60px 25px;
+}
 
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
+h1{
+    text-align:center;
+    font-size:3.5rem;
+    color:#0047B3;
+    margin-bottom:50px;
+    font-weight:700;
+}
 
-        .bubble {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            background-color: #4a90e2;
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-            font-size: 1.1em;
-            font-weight: bold;
-            transition: transform 0.3s, background-color 0.3s;
-        }
+.intro{
+    font-size:2rem;
+    line-height:1.4;
+    text-align:center;
+    margin-bottom:50px;
+}
 
-        .bubble:hover {
-            transform: scale(1.08);
-            background-color: #357abd;
-        }
+.question{
+    text-align:center;
+    color:#D97B5C;
+    font-size:4rem;
+    font-weight:bold;
+    font-style:italic;
+    line-height:1.3;
+    margin:60px 0;
+}
 
-        @media (max-width: 600px) {
-            .bubble {
-                width: 180px;
-                height: 180px;
-                font-size: 1em;
-            }
-        }
-    </style>
+.paragraph{
+    font-size:2rem;
+    line-height:1.5;
+    margin-bottom:35px;
+}
+
+.orange{
+    color:#D97B5C;
+}
+
+.events{
+    margin-top:40px;
+}
+
+.event{
+    font-size:1.9rem;
+    margin-bottom:30px;
+    line-height:1.4;
+}
+
+.mail-display{
+    text-align:center;
+    font-size:2rem;
+    font-weight:bold;
+    margin-top:60px;
+    margin-bottom:20px;
+    color:#0047B3;
+}
+
+.bubbles{
+    display:flex;
+    justify-content:center;
+    gap:60px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.bubble{
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    text-decoration:none;
+    color:white;
+    background:#D97B5C;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:25px;
+    font-size:1.5rem;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.bubble:hover{
+    transform:scale(1.05);
+}
+
+.footer{
+    margin-top:70px;
+    background:#0047B3;
+    color:white;
+    text-align:center;
+    padding:18px;
+    font-size:1.4rem;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:2.3rem;
+    }
+
+    .intro,
+    .paragraph,
+    .event,
+    .mail-display{
+        font-size:1.4rem;
+    }
+
+    .question{
+        font-size:2.6rem;
+    }
+
+    .bubble{
+        width:200px;
+        height:200px;
+        font-size:1.2rem;
+    }
+}
+
+</style>
+
 </head>
 <body>
 
 <div class="container">
 
-    <h1>Le bien-être au quotidien – Le programme WHAOU s'intéresse à votre quartier</h1>
+    <h1>Enquête habitat et bien-être</h1>
 
-    <p>
-        Nous cherchons à comprendre les liens entre l'état de l'habitat et le bien-être des résidents.
-        Pour avancer, nous avons besoin de vous !
-    </p>
+    <div class="intro">
+        Nous sommes une équipe de chercheurs et nous étudions les liens entre l’état de l’habitat et le bien-être des locataires.
+    </div>
 
-    <p>
-        Notre recherche s'implante dans les quartiers de Danube, Solidarité et Marseillaise.
-        Nous recherchons des habitants pour participer à des entretiens individuels d'environ une heure,
-        entièrement anonymes, afin de parler de votre ressenti sur votre cadre de vie.
-    </p>
+    <div class="question">
+        Êtes-vous content quand vous rentrez chez vous ?
+    </div>
 
-    <p>
-        L'objectif est d'aider les politiques publiques liées au logement à améliorer les conditions
-        de votre bien-être.
-    </p>
+    <div class="paragraph">
+        <span class="orange">Pour avancer, nous avons besoin de vous !</span>
+        Si vous voulez vous exprimer et parler des problématiques liées à votre logement, n’hésitez pas !
+    </div>
 
-    <p>
-        Contactez-nous par mail ou remplissez le formulaire ci-dessous !
-    </p>
+    <div class="events">
 
-    <div class="buttons">
+        <div class="event">
+            Des entretiens seront conduits par notre équipe courant juin 2026 !
+        </div>
+
+        <div class="event">
+            Rencontres collectives prévues dans le quartier, près de chez vous le 24 et 25 juin 2026 !
+        </div>
+
+    </div>
+
+    <div class="mail-display">
+        Contact : whaoucnrs@gmail.com
+    </div>
+
+    <div class="bubbles">
 
         <a class="bubble"
-           href="mailto:saphir.crh@gmail.com?subject=Participation%20%C3%A0%20la%20recherche%20WHAOU">
+           href="mailto:whaoucnrs@gmail.com?subject=Participation%20%C3%A0%20l%27enqu%C3%AAte%20habitat%20et%20bien-%C3%AAtre">
             Nous contacter<br>par mail
         </a>
 
@@ -115,6 +193,10 @@
 
     </div>
 
+</div>
+
+<div class="footer">
+    POUR PARTICIPER À NOTRE RECHERCHE : WHAOUCNRS@GMAIL.COM
 </div>
 
 </body>
