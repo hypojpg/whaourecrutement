@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,176 +14,148 @@
     box-sizing:border-box;
 }
 
-body{
+html, body{
+    width:100%;
+    overflow-x:hidden;
+    font-family: Arial, Helvetica, sans-serif;
     background:#f3f3f1;
-    font-family:Arial, Helvetica, sans-serif;
     color:#0047B3;
 }
 
+/* CONTAINER CENTRÉ */
 .container{
-    max-width:1000px;
-    margin:auto;
-    padding:40px 25px 60px 25px;
+    width:100%;
+    max-width:700px;
+    margin:0 auto;
+    padding:24px 18px 50px;
+    text-align:center;
 }
 
+/* TITRE */
 h1{
-    text-align:center;
-    color:#0047B3;
-    font-size:clamp(2.2rem, 5vw, 4rem);
-    font-weight:700;
-    margin-bottom:50px;
+    font-size:2rem;
+    line-height:1.2;
+    margin-bottom:25px;
 }
 
+/* INTRO */
 .intro{
-    text-align:center;
-    font-size:clamp(1.2rem, 2.5vw, 2rem);
+    font-size:1.1rem;
     line-height:1.5;
-    margin-bottom:60px;
+    margin-bottom:30px;
 }
 
+/* QUESTION PRINCIPALE */
 .question{
-    text-align:center;
+    font-size:2.3rem;
     color:#D97B5C;
     font-style:italic;
-    font-weight:700;
-    font-size:clamp(2.3rem, 6vw, 5rem);
-    line-height:1.3;
-    margin:40px 0 60px 0;
+    font-weight:bold;
+    line-height:1.2;
+    margin:35px 0;
 }
 
+/* TEXTES */
 .paragraph{
-    font-size:clamp(1.2rem, 2.2vw, 2rem);
+    font-size:1.1rem;
     line-height:1.6;
-    margin-bottom:50px;
-    text-align:center;
+    margin-bottom:25px;
 }
 
 .orange{
     color:#D97B5C;
-    font-weight:600;
-}
-
-.events{
-    display:flex;
-    flex-direction:column;
-    gap:30px;
-    margin-bottom:50px;
+    font-weight:bold;
 }
 
 .event{
-    font-size:clamp(1.2rem, 2vw, 1.9rem);
+    font-size:1.1rem;
     line-height:1.5;
-    text-align:center;
+    margin-bottom:20px;
 }
 
+/* EMAIL */
 .mail-display{
-    text-align:center;
-    font-size:clamp(1.2rem, 2vw, 1.8rem);
+    margin-top:35px;
+    margin-bottom:25px;
+    font-size:1.1rem;
     font-weight:bold;
-    margin-bottom:40px;
-    line-height:1.6;
     word-break:break-word;
 }
 
+/* BOUTONS */
 .bubbles{
     display:flex;
-    justify-content:center;
-    gap:40px;
-    flex-wrap:wrap;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    margin-top:20px;
 }
 
 .bubble{
-    width:260px;
-    height:260px;
-
+    width:100%;
+    max-width:320px;
     background:#D97B5C;
     color:white;
-
-    border-radius:50%;
-
     text-decoration:none;
+
+    padding:18px;
+    border-radius:16px;
+
+    font-size:1.1rem;
+    font-weight:bold;
+
+    text-align:center;
 
     display:flex;
     align-items:center;
     justify-content:center;
-
-    text-align:center;
-
-    padding:20px;
-
-    font-size:1.4rem;
-    font-weight:bold;
-
-    transition:0.3s;
 }
 
-.bubble:hover{
-    transform:scale(1.05);
-}
-
+/* FOOTER */
 .footer{
+    margin-top:40px;
     background:#0047B3;
     color:white;
     text-align:center;
-
-    padding:18px;
-
-    margin-top:60px;
-
-    font-size:clamp(0.9rem, 2vw, 1.3rem);
-
-    letter-spacing:2px;
+    padding:16px;
+    font-size:0.95rem;
     font-weight:bold;
+    line-height:1.4;
 }
 
-/* Téléphones */
-
-@media (max-width: 768px){
+/* VERSION ORDINATEUR */
+@media(min-width:768px){
 
     .container{
-        padding:25px 20px 40px 20px;
+        text-align:center;
+        padding:50px 20px;
     }
 
-    .intro{
-        margin-bottom:40px;
+    h1{
+        font-size:3rem;
+    }
+
+    .intro,
+    .paragraph,
+    .event{
+        font-size:1.4rem;
     }
 
     .question{
-        margin:30px 0 40px 0;
-    }
-
-    .paragraph{
-        text-align:left;
-    }
-
-    .event{
-        text-align:left;
+        font-size:3.5rem;
     }
 
     .bubbles{
-        flex-direction:column;
-        align-items:center;
-        gap:20px;
+        flex-direction:row;
+        justify-content:center;
     }
 
     .bubble{
-        width:100%;
-        max-width:340px;
-        height:90px;
-
-        border-radius:20px;
-
-        font-size:1.2rem;
-    }
-
-    .footer{
-        letter-spacing:1px;
-        line-height:1.5;
+        max-width:280px;
     }
 }
 
 </style>
-
 </head>
 
 <body>
@@ -202,20 +173,16 @@ h1{
     </div>
 
     <div class="paragraph">
-        <span class="orange">Pour avancer, nous avons besoin de vous !</span>
+        <span class="orange">Pour avancer, nous avons besoin de vous !</span><br>
         Si vous voulez vous exprimer et parler des problématiques liées à votre logement, n’hésitez pas !
     </div>
 
-    <div class="events">
+    <div class="event">
+        Des entretiens seront conduits par notre équipe courant juin 2026 !
+    </div>
 
-        <div class="event">
-            Des entretiens seront conduits par notre équipe courant juin 2026 !
-        </div>
-
-        <div class="event">
-            Rencontres collectives prévues dans le quartier, près de chez vous le 24 et 25 juin 2026 !
-        </div>
-
+    <div class="event">
+        Rencontres collectives prévues dans le quartier, les 24 et 25 juin 2026 !
     </div>
 
     <div class="mail-display">
@@ -226,14 +193,14 @@ h1{
     <div class="bubbles">
 
         <a class="bubble"
-           href="mailto:whaoucnrs@gmail.com?subject=Participation%20%C3%A0%20l%27enqu%C3%AAte%20habitat%20et%20bien-%C3%AAtre">
-            Nous contacter<br>par mail
+           href="mailto:whaoucnrs@gmail.com?subject=Participation%20%C3%A0%20l%27enqu%C3%AAte">
+            Nous contacter par mail
         </a>
 
         <a class="bubble"
            href="https://docs.google.com/forms/d/e/1FAIpQLScXlb-k1AlUgO0_f-R29YzN_gTRfIA0Chgc72HyyWTOa-t_Iw/viewform?usp=header"
            target="_blank">
-            Accéder au<br>formulaire
+            Accéder au formulaire
         </a>
 
     </div>
@@ -241,7 +208,8 @@ h1{
 </div>
 
 <div class="footer">
-    POUR PARTICIPER À NOTRE RECHERCHE : WHAOUCNRS@GMAIL.COM
+POUR PARTICIPER À NOTRE RECHERCHE<br>
+WHAOUCNRS@GMAIL.COM
 </div>
 
 </body>
