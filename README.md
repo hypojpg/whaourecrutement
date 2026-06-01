@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,15 @@
 
 <style>
 
-body{
+*{
     margin:0;
     padding:0;
-    background:#f1f1ef;
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing:border-box;
+}
+
+body{
+    background:#f3f3f1;
+    font-family:Arial, Helvetica, sans-serif;
     color:#0047B3;
 }
 
@@ -24,80 +29,92 @@ body{
 
 h1{
     text-align:center;
-    font-size:3.5rem;
     color:#0047B3;
-    margin-bottom:50px;
+    font-size:clamp(2.2rem, 5vw, 4rem);
     font-weight:700;
+    margin-bottom:50px;
 }
 
 .intro{
-    font-size:2rem;
-    line-height:1.4;
     text-align:center;
-    margin-bottom:50px;
+    font-size:clamp(1.2rem, 2.5vw, 2rem);
+    line-height:1.5;
+    margin-bottom:60px;
 }
 
 .question{
     text-align:center;
     color:#D97B5C;
-    font-size:4rem;
-    font-weight:bold;
     font-style:italic;
+    font-weight:700;
+    font-size:clamp(2.3rem, 6vw, 5rem);
     line-height:1.3;
-    margin:60px 0;
+    margin:40px 0 60px 0;
 }
 
 .paragraph{
-    font-size:2rem;
-    line-height:1.5;
-    margin-bottom:35px;
+    font-size:clamp(1.2rem, 2.2vw, 2rem);
+    line-height:1.6;
+    margin-bottom:50px;
+    text-align:center;
 }
 
 .orange{
     color:#D97B5C;
+    font-weight:600;
 }
 
 .events{
-    margin-top:40px;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    margin-bottom:50px;
 }
 
 .event{
-    font-size:1.9rem;
-    margin-bottom:30px;
-    line-height:1.4;
+    font-size:clamp(1.2rem, 2vw, 1.9rem);
+    line-height:1.5;
+    text-align:center;
 }
 
 .mail-display{
     text-align:center;
-    font-size:2rem;
+    font-size:clamp(1.2rem, 2vw, 1.8rem);
     font-weight:bold;
-    margin-top:60px;
-    margin-bottom:20px;
-    color:#0047B3;
+    margin-bottom:40px;
+    line-height:1.6;
+    word-break:break-word;
 }
 
 .bubbles{
     display:flex;
     justify-content:center;
-    gap:60px;
+    gap:40px;
     flex-wrap:wrap;
-    margin-top:40px;
 }
 
 .bubble{
     width:260px;
     height:260px;
-    border-radius:50%;
-    text-decoration:none;
-    color:white;
+
     background:#D97B5C;
+    color:white;
+
+    border-radius:50%;
+
+    text-decoration:none;
+
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
+
     text-align:center;
-    padding:25px;
-    font-size:1.5rem;
+
+    padding:20px;
+
+    font-size:1.4rem;
     font-weight:bold;
+
     transition:0.3s;
 }
 
@@ -106,43 +123,70 @@ h1{
 }
 
 .footer{
-    margin-top:70px;
     background:#0047B3;
     color:white;
     text-align:center;
+
     padding:18px;
-    font-size:1.4rem;
-    font-weight:bold;
+
+    margin-top:60px;
+
+    font-size:clamp(0.9rem, 2vw, 1.3rem);
+
     letter-spacing:2px;
+    font-weight:bold;
 }
 
-@media(max-width:768px){
+/* Téléphones */
 
-    h1{
-        font-size:2.3rem;
+@media (max-width: 768px){
+
+    .container{
+        padding:25px 20px 40px 20px;
     }
 
-    .intro,
-    .paragraph,
-    .event,
-    .mail-display{
-        font-size:1.4rem;
+    .intro{
+        margin-bottom:40px;
     }
 
     .question{
-        font-size:2.6rem;
+        margin:30px 0 40px 0;
+    }
+
+    .paragraph{
+        text-align:left;
+    }
+
+    .event{
+        text-align:left;
+    }
+
+    .bubbles{
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
     }
 
     .bubble{
-        width:200px;
-        height:200px;
+        width:100%;
+        max-width:340px;
+        height:90px;
+
+        border-radius:20px;
+
         font-size:1.2rem;
+    }
+
+    .footer{
+        letter-spacing:1px;
+        line-height:1.5;
     }
 }
 
 </style>
 
 </head>
+
 <body>
 
 <div class="container">
@@ -175,7 +219,8 @@ h1{
     </div>
 
     <div class="mail-display">
-        Contact : whaoucnrs@gmail.com
+        Contact :<br>
+        whaoucnrs@gmail.com
     </div>
 
     <div class="bubbles">
